@@ -1,6 +1,17 @@
 import React, { useCallback, useEffect } from "react";
 import logo from "./logo.svg";
 import "./App.css";
+import ErrorBoundary from "./ErrorBoundary";
+
+function ErrorFallback({ error, resetErrorBoundary }) {
+  return (
+    <div role="alert">
+      <p>Something went wrong:</p>
+      <pre>{error.message}</pre>
+      <button onClick={resetErrorBoundary}>Try again</button>
+    </div>
+  );
+}
 
 function App() {
   useEffect(() => {
@@ -22,6 +33,8 @@ function App() {
         >
           Learn React
         </a>
+        <TestAPP></TestAPP>
+        <ErrorBoundary></ErrorBoundary>
       </header>
     </div>
   );

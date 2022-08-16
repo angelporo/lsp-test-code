@@ -1,5 +1,5 @@
 import { momentFormat } from "@/actionCode";
 
-const b = () => {
+export const b = () => {
   return momentFormat();
 };
