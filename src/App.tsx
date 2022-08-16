@@ -1,7 +1,6 @@
 import React, { useCallback, useEffect } from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import ErrorBoundary from "./ErrorBoundary";
 
 function ErrorFallback({ error, resetErrorBoundary }) {
   return (
